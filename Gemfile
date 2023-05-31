@@ -18,8 +18,7 @@ gem "pg"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-# Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
+
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
@@ -66,7 +65,11 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'binding_of_caller', '~> 1.0'
   gem "web-console"
+
+  # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

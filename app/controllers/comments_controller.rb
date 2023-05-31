@@ -5,7 +5,8 @@ class CommentsController < ApplicationController
     @comment.account_id = current_account.id
 
         if @comment.save
-          @comments = Comment.where(post_id: @comment.post_id)
+          # @comments = Comment.where(post_id: @comment.post_id)
+          redirect_to community_post_path(@comment.post.community_id, @comment.post_id)
         else
           # unable to save
         end  
